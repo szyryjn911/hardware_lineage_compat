@@ -19,13 +19,6 @@ cc_library_shared {
 }
 
 cc_library_shared {
-    name: "android.hardware.common-V2-ndk_platform",
-    shared_libs: ["android.hardware.common-V2-ndk"],
-    system_ext_specific: true,
-    vendor_available: true,
-}
-
-cc_library_shared {
     name: "android.hardware.common.fmq-V1-ndk_platform",
     shared_libs: ["android.hardware.common.fmq-V1-ndk"],
     system_ext_specific: true,
@@ -35,13 +28,6 @@ cc_library_shared {
 cc_library_shared {
     name: "android.hardware.graphics.common-V1-ndk_platform",
     shared_libs: ["android.hardware.graphics.common-V1-ndk"],
-    system_ext_specific: true,
-    vendor_available: true,
-}
-
-cc_library_shared {
-    name: "android.hardware.graphics.common-V2-ndk_platform",
-    shared_libs: ["android.hardware.graphics.common-V2-ndk"],
     system_ext_specific: true,
     vendor_available: true,
 }
@@ -228,20 +214,6 @@ cc_library_shared {
     name: "android.hardware.sensors@1.0-convert-shared",
     shared_libs: ["libhidlbase"],
     whole_static_libs: ["android.hardware.sensors@1.0-convert"],
-    vendor_available: true,
-}
-
-cc_library_shared {
-    name: "android.hidl.base@1.0",
-    shared_libs: ["libhidlbase"],
-    system_ext_specific: true,
-    vendor_available: true,
-}
-
-cc_library_shared {
-    name: "android.hidl.manager@1.0",
-    shared_libs: ["libhidlbase"],
-    system_ext_specific: true,
     vendor_available: true,
 }
 
@@ -489,13 +461,6 @@ cc_library {
     defaults: ["libgui_shim_defaults"],
     shared_libs: ["libgui"],
     system_ext_specific: true,
-}
-
-cc_library {
-    name: "libgui_shim_vendor",
-    defaults: ["libgui_shim_defaults"],
-    shared_libs: ["libgui_vendor"],
-    vendor: true,
 }
 
 cc_prebuilt_library_shared {
