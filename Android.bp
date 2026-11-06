@@ -256,6 +256,7 @@ cc_library_shared {
     header_libs: ["libmedia_headers"],
     srcs: [
         "libaudioclient/AudioSystem.cpp",
+        "libaudioclient/AudioTrack.cpp",
     ],
 }
 
@@ -961,4 +962,13 @@ cc_prebuilt_library_shared {
     },
     compile_multilib: "both",
     check_elf_files: false,
+}
+
+java_library {
+    name: "telephony-common-stub",
+    installable: true,
+
+    srcs: [
+        "frameworks/telephony-common-stub/src/**/*.java",
+    ],
 }
